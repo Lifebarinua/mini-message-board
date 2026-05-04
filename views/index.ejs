@@ -1,0 +1,44 @@
+<%- include("partials/header") %>
+
+<header class="hero">
+  <div>
+    <span class="tag">COMMUNITY FEED</span>
+    <h1>Message Board</h1>
+    <p class="subtitle">
+      A clean shared space for quick updates, conversations,
+      and new posts.
+    </p>
+  </div>
+
+  <div class="hero-actions">
+    <div class="count">
+      👥 <strong><%= messages.length %></strong> messages
+    </div>
+    <a class="btn primary" href="/new">+ Add Message</a>
+  </div>
+</header>
+
+<section class="chat">
+
+  <% messages.forEach(message => { %>
+    <div class="chat-row <%= message.user === 'Life' ? 'me' : 'other' %>">
+      
+      <div class="avatar">
+        <%= message.user[0].toUpperCase() %>
+      </div>
+
+      <div class="bubble">
+        <div class="author"><%= message.user %></div>
+        <p><%= message.text %></p>
+        <span class="time">
+          <%= new Date(message.added).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) %>
+        </span>
+        <a class="open-btn" href="/messages/<%= message.id %>">Open</a>
+      </div>
+
+    </div>
+  <% }) %>
+
+</section>
+
+<%- include("partials/footer") %>

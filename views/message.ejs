@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+<main class="container">
+
+  <h1>Message Details</h1>
+
+  <p><strong>From:</strong> <%= message.user %></p>
+
+  <p>
+    <strong>Message:</strong><br>
+    <%= message.text %>
+  </p>
+
+  <p>
+    <strong>Posted:</strong>
+    <%= new Date(message.added).toLocaleString() %>
+  </p>
+
+  <br>
+  <a class="btn primary" href="/messages/<%= message.id %>/edit">
+  ✏ Edit Message
+</a>
+
+  <a class="btn ghost" href="/">← Back to messages</a>
+
+</main>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+
+<main class="container">
+
+<h1>Edit Message</h1>
+
+<form method="POST" action="/messages/<%= message.id %>/edit">
+
+  <label>Name</label>
+  <input type="text" name="messageUser" value="<%= message.user %>" required>
+
+  <label>Message</label>
+  <input type="text" name="messageText" value="<%= message.text %>" required>
+
+  <button class="btn primary" type="submit">Update</button>
+
+</form>
+
+<br>
+<a href="/messages/<%= message.id %>" class="btn ghost">← Back</a>
+
+</main>
+
+<%- include("partials/footer") %>

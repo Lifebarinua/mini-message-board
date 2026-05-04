@@ -1,0 +1,185 @@
+/* ===== BASE ===== */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background: #ece5dd; /* WhatsApp background */
+}
+
+/* ===== HERO / HEADER ===== */
+.hero {
+  background: #ace6df;
+  color: rgb(69, 21, 199);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero h1,
+.hero p,
+.hero .count {
+  color: rgb(52, 60, 185);
+}
+
+/* Right-side actions */
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.count {
+  font-size: 0.9rem;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 150ms;
+}
+
+.btn.primary {
+  background: #25d366; /* WhatsApp green */
+  color: #075e54;
+}
+
+.btn.primary:hover {
+  background: #7cb98c;
+}
+
+.btn.ghost {
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+  background: transparent;
+}
+
+.btn.ghost:hover {
+  background: #f8fafc;
+}
+
+/* ===== MESSAGE CARDS ===== */
+.card {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: 150ms;
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* ===== CHAT UI ===== */
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 20px;
+}
+
+.chat-row {
+  display: flex;
+  align-items: flex-end;
+  max-width: 85%;
+}
+
+.chat-row.me {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #0f172a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+.bubble {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 10px 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.chat-row.me .bubble {
+  background: #dcf8c6;
+}
+
+.author {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 2px;
+}
+
+.bubble p {
+  margin: 0;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.time {
+  display: block;
+  text-align: right;
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  margin-top: 40px;
+  padding: 14px 20px;
+  text-align: center;
+  background: #ace6df;
+  color: #423ca0;
+  font-size: 13px;
+}
+/* ===== PAGE FADE TRANSITION ===== */
+body {
+  animation: fadeIn 200ms ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.bubble {
+  position: relative;
+}
+.open-btn {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.open-btn:hover {
+  text-decoration: underline;
+}

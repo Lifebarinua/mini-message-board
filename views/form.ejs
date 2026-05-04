@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+
+<main class="container">
+
+<h1>New Message</h1>
+
+<form method="POST" action="/new">
+
+  <label>Name</label>
+  <input type="text" name="messageUser" required>
+
+  <label>Message</label>
+  <input type="text" name="messageText" required>
+
+  <button class="btn primary" type="submit">Send Message</button>
+
+</form>
+
+<br>
+<a href="/" class="btn ghost">← Back Home</a>
+
+</main>
+
+<%- include("partials/footer") %>
